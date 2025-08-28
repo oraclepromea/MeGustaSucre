@@ -197,26 +197,41 @@ body {
 
 /* Sections */
 .section {
-    padding: 80px 0;
+    padding: 100px 0;
 }
 
 .section-header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
 }
 
 .section-header h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: #2c5530;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     font-weight: 700;
+    letter-spacing: -0.5px;
+    position: relative;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(135deg, #2c5530, #667eea);
+    border-radius: 2px;
 }
 
 .section-header p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: #666;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
+    line-height: 1.7;
 }
 
 .bg-light {
@@ -227,20 +242,21 @@ body {
 .inn-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 80px;
     align-items: center;
 }
 
 .inn-text h3 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: #2c5530;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
 }
 
 .inn-text p {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     color: #666;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     line-height: 1.8;
 }
 
@@ -264,35 +280,41 @@ body {
 }
 
 .pricing {
-    background: #f8f9fa;
-    padding: 2rem;
-    border-radius: 15px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 2.5rem;
+    border-radius: 20px;
     text-align: center;
+    border: 1px solid rgba(44, 85, 48, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .pricing h4 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: #2c5530;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
 }
 
 /* Gallery */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 30px;
+    margin: 40px 0;
 }
 
 .gallery-item {
-    aspect-ratio: 1;
-    border-radius: 15px;
+    aspect-ratio: 4/3;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s ease;
+    position: relative;
 }
 
 .gallery-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
 }
 
 .gallery-image {
@@ -318,20 +340,21 @@ body {
 .cafe-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 80px;
     align-items: center;
 }
 
 .cafe-text h3 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: #2c5530;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
 }
 
 .cafe-text p {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     color: #666;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     line-height: 1.8;
 }
 
@@ -372,20 +395,21 @@ body {
 .school-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 80px;
     align-items: start;
 }
 
 .school-text h3 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: #2c5530;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
 }
 
 .school-text p {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     color: #666;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     line-height: 1.8;
 }
 
@@ -403,33 +427,38 @@ body {
 }
 
 .course-card {
-    background: #f8f9fa;
-    padding: 1.5rem;
-    border-radius: 15px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 2rem;
+    border-radius: 20px;
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(44, 85, 48, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .course-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
 }
 
 .course-card h5 {
     color: #2c5530;
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
 }
 
 .course-card p {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #666;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
 }
 
 .price {
     font-weight: 700;
     color: #2c5530;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .school-features h4 {
@@ -459,53 +488,59 @@ body {
 /* Attractions Section */
 .attractions-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 40px;
+    margin: 40px 0;
 }
 
 .attraction-card {
     background: white;
-    border-radius: 15px;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .attraction-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-12px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
 }
 
 .attraction-image {
-    height: 200px;
+    height: 250px;
     overflow: hidden;
 }
 
 .attraction-content {
-    padding: 1.5rem;
+    padding: 2rem;
 }
 
 .attraction-content h3 {
     color: #2c5530;
     margin-bottom: 1rem;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    font-weight: 600;
 }
 
 .attraction-content p {
     color: #666;
-    line-height: 1.6;
+    line-height: 1.7;
+    font-size: 1.05rem;
 }
 
 /* Contact Section */
 .contact-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 80px;
 }
 
 .contact-info h3 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: #2c5530;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
+    font-weight: 600;
 }
 
 .contact-item {
@@ -528,16 +563,17 @@ body {
 
 .contact-map {
     background: #f8f9fa;
-    border-radius: 15px;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .contact-map iframe {
     width: 100%;
-    height: 400px;
+    height: 450px;
     border: none;
-    border-radius: 15px;
+    border-radius: 20px;
 }
 
 /* Footer */
@@ -688,11 +724,21 @@ body {
     }
 
     .section {
-        padding: 60px 0;
+        padding: 80px 0;
     }
 
     .section-header h2 {
-        font-size: 2rem;
+        font-size: 2.5rem;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    .attractions-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 }
 
