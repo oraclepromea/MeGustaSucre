@@ -311,6 +311,14 @@ body {
     margin: 40px 0;
 }
 
+/* Cafe and Spanish School specific gallery */
+.cafe-gallery .gallery-grid,
+.school-gallery .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin: 50px 0;
+}
+
 .gallery-item {
     aspect-ratio: 4/3;
     border-radius: 20px;
@@ -318,6 +326,20 @@ body {
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
     transition: all 0.4s ease;
     position: relative;
+}
+
+/* Larger items for Cafe and Spanish School */
+.cafe-gallery .gallery-item,
+.school-gallery .gallery-item {
+    aspect-ratio: 3/2;
+    min-height: 300px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+}
+
+.cafe-gallery .gallery-item:hover,
+.school-gallery .gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.25);
 }
 
 .gallery-item:hover {
@@ -754,6 +776,12 @@ body {
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 25px;
+    }
+    
+    .cafe-gallery .gallery-grid,
+    .school-gallery .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
     
     .attractions-grid {
