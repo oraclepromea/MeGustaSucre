@@ -1,22 +1,22 @@
 # Me Gusta Sucre - Professional Website
 
-A modern, responsive website for Me Gusta Sucre, a company and agency located in Sucre, Bolivia. The website showcases their home stay accommodation, cafe, Spanish school, and local attractions.
+A modern, responsive website for Me Gusta Sucre, a company and agency located in Sucre, Bolivia. The website showcases their inn accommodation, cafe, Spanish school, and local attractions.
 
 ## 🌟 Features
 
-### 🏠 Home Stay Section
+### 🏠 Inn Section
 - Comfortable accommodation in the heart of Sucre
 - Modern amenities and family atmosphere
 - Competitive pricing starting from $25/night
 - Gallery showcase of rooms and common areas
 
-### ☕ Cafe Section
+### ☕ Me Gusta Café Section
 - Traditional Bolivian cuisine and international favorites
 - Popular local dishes like Salteñas and Chuño
 - Fresh coffee from the Yungas region
 - Opening hours and reservation system
 
-### 📚 Spanish School
+### 📚 Me Gusta Spanish School
 - Personalized instruction for all levels
 - Small group and one-on-one classes
 - Certified teachers with cultural activities

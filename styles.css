@@ -217,21 +217,21 @@ body {
     background-color: #f8f9fa;
 }
 
-/* Home Stay Section */
-.homestay-content {
+/* Inn Section */
+.inn-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
 }
 
-.homestay-text h3 {
+.inn-text h3 {
     font-size: 2rem;
     color: #2c5530;
     margin-bottom: 1rem;
 }
 
-.homestay-text p {
+.inn-text p {
     font-size: 1.1rem;
     color: #666;
     margin-bottom: 2rem;
@@ -645,7 +645,7 @@ body {
         align-items: center;
     }
 
-    .homestay-content,
+    .inn-content,
     .cafe-content,
     .school-content,
     .contact-content {
