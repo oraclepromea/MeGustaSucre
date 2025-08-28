@@ -107,7 +107,7 @@ Replace the placeholder divs with actual images:
 
 The website displays contact information and includes an interactive Google Maps embed:
 - **Address**: Sucre, Bolivia
-- **Phone**: +591 4 123 4567
+- **Phone**: +59173425725
 - **Email**: info@megustasucre.com
 - **Hours**: Monday - Sunday: 7:00 AM - 9:00 PM
 - **Location**: Interactive map showing Sucre, Bolivia
@@ -141,4 +141,4 @@ Potential future features:
 
 ---
 
-**Me Gusta Sucre** - Experience authentic Bolivian hospitality in the heart of Sucre, Bolivia. 
+**Me Gusta Sucre** - Experience authentic Bolivian hospitality in the heart of Sucre, Bolivia.

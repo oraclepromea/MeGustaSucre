@@ -197,6 +197,18 @@ function loadImages() {
 document.addEventListener('DOMContentLoaded', function() {
     loadImages();
     
+    // Force Inn gallery grid inline styles to avoid external overrides or caching issues
+    const innGrid = document.getElementById('inn-gallery-grid');
+    if (innGrid) {
+        innGrid.style.display = 'grid';
+        innGrid.style.gridTemplateColumns = '1fr 1fr';
+        innGrid.style.gridAutoRows = 'auto';
+        innGrid.style.gap = '40px';
+        innGrid.style.width = '100%';
+        innGrid.style.maxWidth = '700px';
+        innGrid.style.margin = '0 auto';
+    }
+
     // Add loading animation to sections
     const sections = document.querySelectorAll('.section');
     sections.forEach((section, index) => {
@@ -287,4 +299,4 @@ document.addEventListener('DOMContentLoaded', function() {
             price.textContent = currency + currentValue.toFixed(0);
         }, 50);
     });
-}); 
+});

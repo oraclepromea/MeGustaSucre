@@ -249,7 +249,7 @@ body {
 /* Inn Section */
 .inn-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr minmax(320px, 700px); /* give the gallery column a fixed max width so it can render a 2x2 block */
     gap: 80px;
     align-items: center;
 }
@@ -301,6 +301,80 @@ body {
     color: #2c5530;
     margin-bottom: 1.5rem;
     font-weight: 600;
+}
+
+/* Fix Inn Gallery for balanced 2x2 grid layout */
+.inn-gallery {
+    width: 100%;
+    display: block;
+    display: flex;
+    justify-content: center; /* center the 2x2 block within its column */
+    align-items: center;
+}
+.inn-gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 40px;
+    max-width: 700px;
+    width: 100%; /* changed from 700px to 100% */
+    margin: 0 auto;
+}
+
+/* Ensure Inn gallery stays a 2x2 grid even if .gallery-grid is redefined later */
+.gallery-grid.inn-gallery-grid {
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: 1fr 1fr !important;
+    gap: 40px !important;
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Strong override: force Inn gallery to be a stable 2x2 grid */
+#inn .gallery-grid.inn-gallery-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-auto-rows: 1fr !important;
+    grid-auto-flow: row !important;
+    gap: 40px !important;
+    width: 100% !important;
+    max-width: 700px !important;
+    margin: 0 auto !important;
+}
+
+#inn .gallery-grid.inn-gallery-grid > .gallery-item {
+    width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+    align-self: stretch !important;
+}
+
+#inn .inn-gallery {
+    min-width: 0 !important; /* allow the gallery to shrink correctly within the grid column */
+}
+
+/* Force inn gallery container to behave as a block so the grid can size correctly */
+#inn .inn-gallery {
+    display: block !important;
+    width: 100% !important;
+}
+
+@media (max-width: 900px) {
+    .inn-gallery-grid {
+        max-width: 100%;
+        width: 100%;
+        gap: 20px;
+    }
+    .inn-gallery-grid .gallery-item {
+        height: 180px;
+    }
+}
+@media (max-width: 480px) {
+    .inn-gallery-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
 }
 
 /* Gallery */
@@ -428,9 +502,22 @@ body {
     text-align: center;
 }
 
+.cafe-hours h4,
+.cafe-hours p,
+.cafe-hours a {
+    color: white !important;
+}
+
 .cafe-hours h4 {
     margin-bottom: 1rem;
     font-size: 1.3rem;
+}
+
+.cafe-hours-highlight {
+    color: #FFD700;
+    font-weight: bold;
+    font-size: 1.15em;
+    letter-spacing: 1px;
 }
 
 /* Spanish School Section */
@@ -856,4 +943,25 @@ html {
 .loading.loaded {
     opacity: 1;
     transform: translateY(0);
-} 
+}
+
+/* Final override: guarantee Inn gallery is 2x2 */
+#inn #inn-gallery-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-auto-rows: auto !important;
+    gap: 40px !important;
+    width: 100% !important;
+    max-width: 700px !important;
+    margin: 0 auto !important;
+}
+
+#inn .inn-gallery {
+    display: block !important;
+    width: 100% !important;
+}
+
+#inn .gallery-grid.inn-gallery-grid > .gallery-item {
+    width: 100% !important;
+    min-width: 0 !important;
+}
