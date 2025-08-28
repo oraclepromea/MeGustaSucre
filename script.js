@@ -168,7 +168,7 @@ window.addEventListener('scroll', () => {
 
 // Loading animation for real images
 function loadImages() {
-    const images = document.querySelectorAll('.gallery-image, .hero-bg-image');
+    const images = document.querySelectorAll('.gallery-image, .hero-bg-image, .attraction-img');
     images.forEach((image, index) => {
         // Add loading animation for real images
         image.style.opacity = '0';
