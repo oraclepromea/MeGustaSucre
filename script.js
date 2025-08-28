@@ -166,15 +166,21 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Loading animation for images (placeholder for real images)
+// Loading animation for real images
 function loadImages() {
-    const placeholders = document.querySelectorAll('.gallery-placeholder');
-    placeholders.forEach((placeholder, index) => {
-        // Simulate image loading
-        setTimeout(() => {
-            placeholder.style.opacity = '0.8';
-            placeholder.style.transform = 'scale(1.05)';
-        }, index * 200);
+    const images = document.querySelectorAll('.gallery-image, .hero-bg-image');
+    images.forEach((image, index) => {
+        // Add loading animation for real images
+        image.style.opacity = '0';
+        image.style.transform = 'scale(1.1)';
+        
+        image.addEventListener('load', () => {
+            setTimeout(() => {
+                image.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                image.style.opacity = '1';
+                image.style.transform = 'scale(1)';
+            }, index * 200);
+        });
     });
 }
 
