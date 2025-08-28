@@ -181,6 +181,15 @@ function loadImages() {
                 image.style.transform = 'scale(1)';
             }, index * 200);
         });
+        
+        // Handle images that might already be loaded
+        if (image.complete) {
+            setTimeout(() => {
+                image.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                image.style.opacity = '1';
+                image.style.transform = 'scale(1)';
+            }, index * 200);
+        }
     });
 }
 
